@@ -1,0 +1,5 @@
+dontaudit untrusted_app hal_memtrack_hwservice:hwservice_manager { find };
+allow untrusted_app priv_app:dir getattr;
+dontaudit untrusted_app serialno_prop:file { getattr map open };
+allow untrusted_app vendor_default_prop:file { getattr open };
+dontaudit untrusted_app proc_vmstat:file { open getattr };
